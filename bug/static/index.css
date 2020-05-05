@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    /* outline: dashed red; */
+}
+
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('../static/images/background.jpg');
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+.form-box{
+    height: 600px;
+    width: 500px;
+    position: relative;
+    margin: 6% auto 0 auto;
+    padding: 5px;
+    background: transparent;
+}
+
+.button-box{
+    height: auto;
+    width: 235px;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+}
+
+.button-box button{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: rgba(133,0,0,1);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.btn2{
+    top: 0;
+    left: 110px;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: rgba(133,0,0,1);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+/* .form-box input{
+    margin: auto;
+    display: block;
+    width: 300px;
+} */
+
+.form{
+    margin: 0 auto;
+    height: 130px;
+    width: 280px;
+}
+
+.input-group{
+    /* top: 180px; */
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px auto;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+}
+
+.btn-submit{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 5px auto;
+    background: rgba(133,0,0,1);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.img-box{
+    width: 230px;
+    margin: 0 auto 35px auto;
+}
+
+.fa{
+    color: white;
+    background: rgba(133,0,0,1);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 30px;
+}
+
+.fa-facebook{
+    margin-right: 35px;
+}
+
+.fa-twitter{
+    margin-right: 35px;
+}

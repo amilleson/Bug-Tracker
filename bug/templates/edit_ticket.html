@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/new_ticket.css">
+    <title>Edit Ticket #{{ ticket.id }}</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="navbar">
+                <h4 class="text-white">Hello {{ user.first_name }}!</h4>
+                <p class="align-middle m-0">
+                    <a href="/new-ticket">New Ticket</a>
+                    <p class="text-white m-0">|</p>
+                    <a href="/dashboard">Dashboard</a>
+                </p>
+                <a href="/logout">Log Out</a>
+            </div>
+            <div class="container form-group">
+                <form action="/edit/{{ ticket.id }}/1" method="post">
+                    {% csrf_token %}
+                    <input type="text" name="ticket_name" class="form-control mt-2 mb-2" placeholder="Bug Name" value="{{ ticket.name }}">
+                    <select name="app" id="bug_app" class="form-control mt-2 mb-2">
+                        <option value="null">Choose which App...</option>
+                        <option value="Adonis Tech">Adonis Tech</option>
+                        <option value="Tech Learn">Tech Learn</option>
+                        <option value="Sketch Tech">Sketch Tech</option>
+                        <option value="Cycle Tech">Cycle Tech</option>
+                    </select>
+                    <textarea name="description" id="" cols="30" rows="10" placeholder="Bug Description" class="form-control mt-2 mb-2">{{ ticket.description }}</textarea>
+                    <button type="submit" class="btn btn-secondary">Edit Ticket</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

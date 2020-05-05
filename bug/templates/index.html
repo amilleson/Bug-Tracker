@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <title>Login/Register</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-box">
+            <div class="button-box">
+                <div class="button btn"></div>
+                <button type="button" name="button1" id="button1">Log In</button>
+                <button type="button" name="button2" id="button2">Register</button>
+            </div>
+            <div class="img-box">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div class="form">
+                <form action="/login" method="post" class="input-group">
+                    {% for message in messages %}
+                        <li style="color: rgba(133,0,0,1);">{{ message }}</li>
+                    {% endfor %}
+                    {% csrf_token %}
+                    <div class="insert">
+                        <input type="text" name="email" placeholder="Email" class="input-field">
+                        <input type="password" name="password" placeholder="Enter Password" class="input-field">
+                        <button type="submit" class="btn-submit">Log In</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.js"
+			  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+              crossorigin="anonymous"></script>
+    <script src="../static/index.js"></script>
+</body>
+</html>
