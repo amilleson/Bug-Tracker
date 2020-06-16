@@ -54,11 +54,11 @@ class Ticket(models.Model):
     description = models.TextField()
     creator = models.ForeignKey(User, related_name="submitter", on_delete = models.CASCADE)
     action_phase = models.IntegerField(default=0)
-    vote = models.IntegerField(default=0)
+    # vote = models.IntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def vote_vote(self):
-        self.vote+=1
+    # def vote_vote(self):
+    #     self.vote+=1
 
     objects = TicketManager()

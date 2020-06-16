@@ -46,7 +46,8 @@
                         {% if i.action_phase == 3 %}
                             <td style="background-color:green">Fixed</td>
                         {% endif %}
-                        <td><a href="/edit/{{ i.id }}">Edit</a> | <a href="/delete/{{ i.id }}">Delete</a> | <a href="/vote/{{ i.id }}">Vote</a></td>
+                        <td><a href="/edit/{{ i.id }}">Edit</a> | <a href="/delete/{{ i.id }}">Delete</a></td>
+                        <!-- <a href="/vote/{{ i.id }}">Vote</a> -->
                     </tr>
                     {% endfor %}
                 </table>
